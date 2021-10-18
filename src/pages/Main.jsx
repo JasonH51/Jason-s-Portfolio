@@ -1,12 +1,11 @@
 import {useState} from 'react';
 import styled, {ThemeProvider} from 'styled-components';
+import About from '../components/about/About';
 import Contact from '../components/contact/Contact';
 import Intro from '../components/intro/Intro';
 import Menu from '../components/menu/Menu';
 import Portfolio from '../components/portfolio/Portfolio';
-import Testimonials from '../components/testimonials/Testimonials';
 import Topbar from '../components/topbar/Topbar';
-import Works from '../components/works/Works';
 import {theme} from '../themes';
 
 const Container = styled.div`
@@ -16,7 +15,7 @@ const Container = styled.div`
 const Wrapper = styled(Container)`
   width: 100%;
   height: calc(100vh - 70px);
-  background-color: lightsalmon;
+  background-color: white;
   position: relative;
   top: 70px;
   scroll-behavior: smooth;
@@ -43,8 +42,8 @@ function Main() {
         <Wrapper>
           <Intro />
           <Portfolio />
-          <Works />
-          <Testimonials />
+          <About />
+
           <Contact />
         </Wrapper>
       </Container>

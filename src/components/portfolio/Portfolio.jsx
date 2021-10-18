@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {list} from '../../data/portfolioListData';
 import styled from 'styled-components';
 import PortfolioList from './PortfolioList';
-import PortfolioItem from './PortfolioItem';
+import Project from './Project';
 import {
   featuredPortfolio,
   webPortfolio,
@@ -19,6 +19,7 @@ const Container = styled.div`
 
   h1 {
     font-size: 50px;
+    overflow: hidden;
     @media (max-width: 768px) {
       font-size: 30px;
       overflow: hidden;
@@ -28,27 +29,21 @@ const Container = styled.div`
 
 const List = styled.ul`
   margin: 10px;
-  padding: 0;
+  padding: 5px;
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
   @media (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
     margin: 10px 0;
-    
   }
 `;
 
 const ProjectContainer = styled.div`
-  width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-  }
+  height: 100vh;
+  width: 100vw;
 `;
 
 const Portfolio = () => {
@@ -85,6 +80,7 @@ const Portfolio = () => {
           <PortfolioList
             title={i.title}
             id={i.id}
+            key={i.id}
             active={selected === i.id}
             setSelected={setSelected}
           />
@@ -92,9 +88,7 @@ const Portfolio = () => {
       </List>
 
       <ProjectContainer>
-        {data.map(i => (
-          <PortfolioItem id={i.id} title={i.title} img={i.img} />
-        ))}
+        <Project data={data} />
       </ProjectContainer>
     </Container>
   );

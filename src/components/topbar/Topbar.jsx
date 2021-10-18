@@ -3,6 +3,28 @@ import styled from 'styled-components';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
+const ItemContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .icons {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  span {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+`;
+
 const Hamburger = styled.div`
   width: 32px;
   height: 25px;
@@ -31,6 +53,11 @@ const Container = styled.div`
   &.active {
     background-color: ${e => e.theme.colors.main};
     color: white;
+    ${ItemContainer} {
+      a {
+        color: white;
+      }
+    }
     ${Hamburger} {
       span {
         &:first-child {
@@ -69,23 +96,6 @@ const Logo = styled.a`
   text-decoration: none;
 `;
 
-const ItemContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-left: 30px;
-  @media (max-width: 768px) {
-    display: none;
-  }
-  .icons {
-    font-size: 18px;
-    margin-right: 5px;
-  }
-  span {
-    font-size: 15px;
-    font-weight: 500;
-  }
-`;
-
 const Right = styled.div``;
 
 const Topbar = ({menuOpen, setMenuOpen}) => {
@@ -96,11 +106,15 @@ const Topbar = ({menuOpen, setMenuOpen}) => {
           <Logo href="#intro">Jason H</Logo>
           <ItemContainer>
             <AccountCircleIcon className="icons" />
-            <span>+1 469 493 9577</span>
+            <a href="#contact">
+              <span>+1 469 493 9577</span>
+            </a>
           </ItemContainer>
           <ItemContainer>
             <MailOutlineIcon className="icons" />
-            <span>JasonH5151@gmail.com</span>
+            <a href="#contact">
+              <span>JasonH5151@gmail.com</span>
+            </a>
           </ItemContainer>
         </Left>
 

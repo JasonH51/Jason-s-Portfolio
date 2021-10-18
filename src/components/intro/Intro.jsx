@@ -16,25 +16,24 @@ const Container = styled.div`
 const Left = styled.div`
   flex: 0.5;
   overflow: hidden;
+  @media (max-width: 768px) {
+  }
 `;
 
 const ImageContainer = styled.div`
-  width: 700px;
-  height: 700px;
-  background-color: crimson;
-  border-radius: 50%;
+  height: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  float: right;
+  overflow: hidden;
   @media (max-width: 768px) {
-    height: 300px;
-    align-items: flex-end;
   }
 `;
 
 const Image = styled.img`
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
   @media (max-width: 768px) {
   }
 `;
@@ -93,7 +92,6 @@ const Wrapper = styled.div`
     @media (max-width: 768px) {
       width: 213px;
       font-size: 22px;
-    
     }
     span {
       font-size: inherit;
@@ -145,7 +143,7 @@ const Intro = () => {
       backDelay: 1500,
       backSpeed: 20,
       showCursor: true,
-      strings: [' Software Engineer', '  Full Stack Developer']
+      strings: ['Web Developer', 'Full Stack Developer', 'Software Engineer']
     });
   }, []);
 
@@ -153,7 +151,7 @@ const Intro = () => {
     <Container id="intro">
       <Left>
         <ImageContainer>
-          <Image src="https://blog.photofeeler.com/wp-content/uploads/2017/09/tinder-photo-size-tinder-picture-size-tinder-aspect-ratio-image-dimensions-crop.jpg"></Image>
+          <Image src="assets/computerScreen.jpg"></Image>
         </ImageContainer>
       </Left>
       <Right>
@@ -161,7 +159,7 @@ const Intro = () => {
           <h2>Hi There, I'm</h2>
           <h1>Jason Horton</h1>
           <h3>
-            <span ref={textRef}></span>
+            Aspiring <span ref={textRef}></span>
           </h3>
         </Wrapper>
         <a href="#portfolio">

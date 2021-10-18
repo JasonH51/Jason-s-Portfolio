@@ -9,6 +9,7 @@ const Item = styled.div`
   margin: 10px 20px;
   position: relative;
   cursor: pointer;
+  flex: 2 1 33%;
   /* transition: all 0.5s; */
   ${e => e.theme.df.centered}
 

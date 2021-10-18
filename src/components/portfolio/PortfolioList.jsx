@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ListItem = styled.li`
-  font-size: 12px;
+  font-size: 14px;
   margin-right: 5px;
-  padding: 7px;
+  padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   @media (max-width: 768px) {
