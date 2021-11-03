@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
+import emailjs from 'emailjs-com';
 
 const Container = styled.div`
-  background-color: white;
+  background-color: ${e => e.theme.colors.secondary};
   display: flex;
   @media (max-width: 768px) {
-   flex-direction: column; 
+    flex-direction: column;
   }
 `;
 
@@ -35,16 +36,16 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 `;
 
 const Input = styled.input`
   width: 300px;
   height: 30px;
   font-size: 14px;
+  margin: 10px;
   @media (max-width: 768px) {
-   width: 200px;
-   height: 20px; 
+    width: 200px;
+    height: 20px;
   }
 `;
 
@@ -52,15 +53,17 @@ const TextArea = styled.textarea`
   width: 300px;
   height: 200px;
   font-size: 14px;
+  margin: 10px;
   @media (max-width: 768px) {
-   width: 200px;
-   height: 100px; 
+    width: 200px;
+    height: 100px;
   }
 `;
 
 const Button = styled.button`
   width: 150px;
   height: 30px;
+  margin-top: 10px;
   color: white;
   background-color: crimson;
   border: none;
@@ -70,14 +73,30 @@ const Button = styled.button`
   &:focus {
     outline: none;
   }
+  &:hover {
+    color: black;
+  }
 `;
 
 const Contact = () => {
   const [message, setMessage] = useState(false);
+  const form = useRef();
 
   const handleSubmit = e => {
     e.preventDefault();
-    setMessage(true);
+
+    emailjs
+      .sendForm('service_8wnxmyr', 'template_lo3lz6m', form.current, 'user_llOMddSOYeNhuY51dbx6d')
+      .then(
+        result => {
+          console.log(result.text);
+          setMessage(true);
+        },
+        error => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -87,9 +106,10 @@ const Contact = () => {
       </Left>
       <Right>
         <h2>Contact</h2>
-        <Form onSubmit={handleSubmit}>
-          <Input type="text" placeholder="Email" />
-          <TextArea placeholder="Message"></TextArea>
+        <Form ref={form} onSubmit={handleSubmit}>
+          <Input type="text" name="name" placeholder="Your Name" required />
+          <Input type="email" name="email" placeholder="Your Email" required />
+          <TextArea name="message" placeholder="Message" required></TextArea>
           <Button type="submit">Send</Button>
           {message && <span>Thanks, I'll reply ASAP :)</span>}
         </Form>

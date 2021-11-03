@@ -21,7 +21,7 @@ const ItemContainer = styled.div`
   }
   a {
     text-decoration: none;
-    color: black;
+    color: inherit;
   }
 `;
 
@@ -35,7 +35,7 @@ const Hamburger = styled.div`
   span {
     width: 100%;
     height: 3px;
-    background-color: ${e => e.theme.colors.main};
+    background-color: ${e => e.theme.colors.dark};
     transform-origin: left;
     transition: all 2s ease;
   }
@@ -44,31 +44,31 @@ const Hamburger = styled.div`
 const Container = styled.div`
   width: 100%;
   height: 70px;
-  background-color: white;
-  color: ${e => e.theme.colors.main};
+  background-color: ${e => e.theme.colors.secondary};
+  color: ${e => e.theme.colors.dark};
   position: fixed;
   top: 0;
   z-index: 3;
   transition: all 1.5s;
   &.active {
-    background-color: ${e => e.theme.colors.main};
-    color: white;
+    background-color: ${e => e.theme.colors.dark};
+    color: ${e => e.theme.colors.text};
     ${ItemContainer} {
       a {
-        color: white;
+        color: ${e => e.theme.colors.text};
       }
     }
     ${Hamburger} {
       span {
         &:first-child {
-          background-color: white;
+          background-color: ${e => e.theme.colors.text};
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
-          background-color: white;
+          background-color: ${e => e.theme.colors.text};
           transform: rotate(-45deg);
         }
       }

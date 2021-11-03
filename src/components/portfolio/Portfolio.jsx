@@ -3,16 +3,12 @@ import {list} from '../../data/portfolioListData';
 import styled from 'styled-components';
 import PortfolioList from './PortfolioList';
 import Project from './Project';
-import {
-  featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio
-} from '../../data/dummy';
+
+import {backEnd, featured, frontEnd} from '../../data/projectsData';
 
 const Container = styled.div`
-  background-color: white;
+  background-color: ${e => e.theme.colors.secondary};
+  color: ${e => e.theme.colors.dark};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +30,8 @@ const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  color: ${e => e.theme.colors.dark};
   @media (max-width: 768px) {
     justify-content: center;
     flex-wrap: wrap;
@@ -53,22 +51,16 @@ const Portfolio = () => {
   useEffect(() => {
     switch (selected) {
       case '1':
-        setData(featuredPortfolio);
+        setData(featured);
         break;
       case '2':
-        setData(webPortfolio);
+        setData(frontEnd);
         break;
       case '3':
-        setData(mobilePortfolio);
-        break;
-      case '4':
-        setData(designPortfolio);
-        break;
-      case '5':
-        setData(contentPortfolio);
+        setData(backEnd);
         break;
       default:
-        setData(featuredPortfolio);
+        setData(frontEnd);
     }
   }, [selected]);
 

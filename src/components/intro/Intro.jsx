@@ -4,8 +4,9 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {init} from 'ityped';
 
 const Container = styled.div`
-  background-color: white;
   display: flex;
+  color: ${e => e.theme.colors.dark};
+  background-color: ${e => e.theme.colors.secondary};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -26,16 +27,12 @@ const ImageContainer = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  @media (max-width: 768px) {
-  }
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  @media (max-width: 768px) {
-  }
 `;
 
 const Right = styled.div`
@@ -143,7 +140,7 @@ const Intro = () => {
       backDelay: 1500,
       backSpeed: 20,
       showCursor: true,
-      strings: ['Web Developer', 'Full Stack Developer', 'Software Engineer']
+      strings: ['Web Developer', 'Software Developer', 'Full Stack Developer']
     });
   }, []);
 

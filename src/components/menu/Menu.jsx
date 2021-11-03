@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   width: 300px;
   height: 100vh;
-  background-color: ${e => e.theme.colors.main};
+  background-color: ${e => e.theme.colors.dark};
   position: fixed;
   top: 0;
   right: ${props => (props.menuOpen ? '0' : '-300px')};
@@ -21,7 +21,7 @@ const List = styled.ul`
   list-style: none;
   font-size: 30px;
   font-weight: 300;
-  color: white;
+  color: ${e => e.theme.colors.text};
   width: 60%;
 `;
 
