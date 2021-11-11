@@ -123,6 +123,14 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
 
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
     h1 {
       overflow: hidden;
     }
@@ -264,7 +272,7 @@ const About = () => {
       </Center>
       <Bottom>
         <Content>
-          <Wrapper seconds={3} isVisable={isVisable}>
+          <Wrapper seconds={2.5} isVisable={isVisable}>
             <div className="content">
               <h2>Skills</h2>
               <div className="contentText">

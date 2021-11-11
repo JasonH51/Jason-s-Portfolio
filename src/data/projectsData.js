@@ -50,7 +50,7 @@ export const frontEnd = [
   {
     id: 3,
     name: `E-Commerce-Website`,
-    desc: `E-Commerce website using FakeStoreAPI.com for dummy data. This was a great project to make for me because I was able to practice using redux/toolkit.`,
+    desc: `E-Commerce website using FakeStoreAPI.com for dummy data. I tried to build a website someone could actually use for an online business.`,
     img: 'assets/e-website.PNG',
     git: 'https://github.com/JasonH51/e-commerce-website',
     website: 'https://wojak.netlify.app/',
@@ -71,7 +71,7 @@ export const backEnd = [
   {
     id: 1,
     name: `Mongodb - Express`,
-    desc: `This is a CRUD api that uses models for products, users, carts, and orders. This api has routes for get, put, post, delete and saves everything to a cloud.mongodb database.`,
+    desc: `CRUD api that uses models for products, users, carts, and orders. This api has routes for get, put, post, delete and saving everything to a cloud.mongodb database.`,
     img: 'assets/e-api.PNG',
     git: 'https://github.com/JasonH51/e-commerce-api',
     website: '',
