@@ -6,7 +6,6 @@ import Intro from '../components/intro/Intro';
 import Menu from '../components/menu/Menu';
 import Portfolio from '../components/portfolio/Portfolio';
 import Topbar from '../components/topbar/Topbar';
-import Testimonials from '../components/testimonials/Testimonials';
 import {theme} from '../themes';
 
 const Container = styled.div`

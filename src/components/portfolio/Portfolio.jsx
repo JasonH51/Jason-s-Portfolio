@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PortfolioList from './PortfolioList';
 import Project from './Project';
 
-import {backEnd, featured, frontEnd} from '../../data/projectsData';
+import {backEnd, frontEnd} from '../../data/projectsData';
 
 const Container = styled.div`
   background-color: ${e => e.theme.colors.secondary};
@@ -51,12 +51,9 @@ const Portfolio = () => {
   useEffect(() => {
     switch (selected) {
       case '1':
-        setData(featured);
-        break;
-      case '2':
         setData(frontEnd);
         break;
-      case '3':
+      case '2':
         setData(backEnd);
         break;
       default:

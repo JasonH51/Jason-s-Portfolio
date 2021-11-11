@@ -39,23 +39,23 @@ const Form = styled.form`
 `;
 
 const Input = styled.input`
-  width: 300px;
+  width: 60%;
   height: 30px;
   font-size: 14px;
   margin: 10px;
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     width: 200px;
     height: 20px;
-  }
+  } */
 `;
 
 const TextArea = styled.textarea`
-  width: 300px;
+  width: 60%;
   height: 200px;
   font-size: 14px;
   margin: 10px;
   @media (max-width: 768px) {
-    width: 200px;
+    /* width: 200px; */
     height: 100px;
   }
 `;

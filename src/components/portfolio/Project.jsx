@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
@@ -56,6 +56,7 @@ const Links = styled.div`
   flex: 1;
 
   span {
+    color: ${e => e.theme.colors.dark};
   }
 `;
 
@@ -170,22 +171,30 @@ const Project = ({data}) => {
           <p>{current?.desc}</p>
           <CenterContainer>
             <Tech>
-              {current?.tech?.map(tech => (
-                <span key={tech?.id}>
+              {current?.tech?.map((tech, idx) => (
+                <span key={idx}>
                   <b>{tech}</b>
                 </span>
               ))}
             </Tech>
             <Links>
-              <span>Links</span>
-              <span>Links</span>
+              {current?.website ? (
+                <a href={current?.website} target="_blank" rel="noreferrer">
+                  <span>Website</span>
+                </a>
+              ) : (
+                ''
+              )}
+              <a href={current?.git} target="_blank" rel="noreferrer">
+                <span>Github</span>
+              </a>
             </Links>
           </CenterContainer>
         </Center>
         {data.length > 1 && (
           <Bottom>
-            {data.map((item, idx) => (
-              <Item onClick={() => setCurrent(item)} key={idx}>
+            {data.map(item => (
+              <Item onClick={() => setCurrent(item)} key={item.id}>
                 <ProjectImage>
                   <h4>{item.name}</h4>
                   <img src={item.img} alt="" />
