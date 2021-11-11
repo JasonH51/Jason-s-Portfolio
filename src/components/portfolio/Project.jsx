@@ -57,6 +57,7 @@ const Links = styled.div`
 
   span {
     color: ${e => e.theme.colors.dark};
+    margin: 10px;
   }
 `;
 
@@ -97,6 +98,9 @@ const Center = styled.div`
   @media (max-width: 768px) {
     flex: 3;
     margin: 0;
+    ${Tech} {
+      display: none;
+    }
   }
 `;
 

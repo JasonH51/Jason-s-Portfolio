@@ -32,11 +32,11 @@ export const frontEnd = [
   {
     id: 1,
     name: `Movies & TV shows`,
-    desc: `A movies and tv show search website that uses moviedb api for all of its data. I enjoyed making this website and I use this website all the time!`,
+    desc: `Movies and tv show search website that uses moviedb api for all of its data. I enjoyed making this and I use this website all the time!`,
     img: 'assets/movieWebsite.PNG',
     git: 'https://github.com/JasonH51/Movies-TV-Series',
     website: 'https://movies-tv-series.netlify.app',
-    tech: ['react', 'react-router', 'material-ui', 'moviedb api', 'axios']
+    tech: ['react', 'axios', 'react-router', 'material-ui', 'moviedb api']
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export const frontEnd = [
     img: 'assets/mapSite.PNG',
     git: 'https://github.com/JasonH51/food-and-entertainment',
     website: 'https://food-and-entertainment.netlify.app/',
-    tech: ['react', 'material-ui', 'react-google-maps', 'axios', 'travel-advisor-api']
+    tech: ['react', 'axios', 'material-ui', 'react-google-maps', 'travel-advisor-api']
   },
   {
     id: 3,
@@ -54,7 +54,7 @@ export const frontEnd = [
     img: 'assets/e-website.PNG',
     git: 'https://github.com/JasonH51/e-commerce-website',
     website: 'https://wojak.netlify.app/',
-    tech: ['react', 'styled-components', 'redux', 'react-router', 'axios']
+    tech: ['react', 'redux', 'axios', 'react-router', 'styled-components']
   }
   // {
   //   id: 4,
@@ -75,6 +75,6 @@ export const backEnd = [
     img: 'assets/e-api.PNG',
     git: 'https://github.com/JasonH51/e-commerce-api',
     website: '',
-    tech: ['nodejs', 'express', 'mongodb', 'mongoose', 'JWT']
+    tech: ['nodejs', 'express', 'JWT', 'mongodb', 'mongoose']
   }
 ];
