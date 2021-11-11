@@ -94,11 +94,8 @@ const Wrapper = styled.div`
     /* height: 150px; */
     background-color: white;
   }
-  .title {
-    height: 33%;
-  }
+
   .edu-spans {
-    height: 66%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,7 +121,6 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10px;
     width: 100%;
 
     h1 {
@@ -138,6 +134,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 768px) {
+    font-size: 13px;
     .tech-items {
       padding: 0px;
       border: none;
@@ -147,16 +144,11 @@ const Wrapper = styled.div`
     .item {
       width: 100px;
     }
-    .p {
-      font-size: 13px;
-    }
-
     .text {
       margin: 0px;
       padding: 0;
     }
     .eduText {
-      height: 150px;
       padding: 5px;
       margin: 5px;
     }
@@ -202,7 +194,7 @@ const About = () => {
   }, [isVisable]);
 
   return (
-    <Container ref={ref}>
+    <Container id="about" ref={ref}>
       <Top>
         <Content>
           <Wrapper seconds={1} isVisable={isVisable}>
@@ -210,13 +202,17 @@ const About = () => {
               <h1>Interests</h1>
               <div className="p">
                 <p>
-                  Hi, I'm Jason thanks for checking out my portfolio. I would like to take some time
+                  Hi, thanks for checking out my website! I'm Jason Horton an INTP finding my new
+                  passion for programming. I spend most my days practicing, learning and writting
+                  notes on something new I'm learning about. I hope that one day I can be apart of
+                  this industry in a bigger and meaningful way.
+                  {/* Hi, I'm Jason thanks for checking out my portfolio. I would like to take some time
                   and tell you a little about myself. I love technology and I spend most of my time
                   at a computer learning pretty much everything. I found myself drawn to programming
                   because of the seemingly limitless possibilities and the fact that I spend so much
                   time with technology, that it just made sense to pursue a career as a programmer.
                   Aside from learning, I enjoy going out on a mountain biking trail and getting some
-                  fresh air.
+                  fresh air. */}
                   {/* I absolutely love science and technology. My whole life I've had an interest in
                   nature and learning how things work. I love to learn all kinds of things and
                   imagine the possibilities and opportunities new technologies introduce in our
@@ -240,11 +236,11 @@ const About = () => {
         <Content isVisable={isVisable}>
           <Wrapper seconds={2} className="middle">
             <div className="content">
-              <h1>Education</h1>
+              <h2>Education</h2>
               <div className="contentText">
                 <div className="eduText">
                   <div className="title">
-                    <h2>Udemy - 2021</h2>
+                    <h3>Udemy - 2021</h3>
                   </div>
                   <div className="edu-spans">
                     <span>The Complete JavaScript Course</span>
@@ -254,7 +250,7 @@ const About = () => {
                 </div>
                 <div className="eduText">
                   <div className="title">
-                    <h2>Bootcamp</h2>
+                    <h3>Bootcamp</h3>
                   </div>
                   <div className="edu-spans">
                     <span>NuCamp Full Stack Bootcamp</span>
@@ -270,11 +266,11 @@ const About = () => {
         <Content>
           <Wrapper seconds={3} isVisable={isVisable}>
             <div className="content">
-              <h1>Skills</h1>
+              <h2>Skills</h2>
               <div className="contentText">
                 <div className="text">
                   <div className="tech-title">
-                    <h2>Front</h2>
+                    <h3>Front</h3>
                   </div>
                   <div className="tech-items">
                     <div className="item">HTML</div>
@@ -285,7 +281,7 @@ const About = () => {
                 </div>
                 <div className="text">
                   <div className="tech-title">
-                    <h2>Back</h2>
+                    <h3>Back</h3>
                   </div>
                   <div className="tech-items">
                     <div className="item">Nodejs</div>
@@ -296,7 +292,7 @@ const About = () => {
                 </div>
                 <div className="text">
                   <div className="tech-title">
-                    <h2>Libraries</h2>
+                    <h3>Libraries</h3>
                   </div>
                   <div className="tech-items">
                     <div className="item">Styled-Components</div>

@@ -49,10 +49,7 @@ const Menu = ({menuOpen, setMenuOpen}) => {
           <a href="#portfolio">Portfolio</a>
         </Item>
         <Item onClick={() => setMenuOpen(!menuOpen)}>
-          <a href="#works">Works</a>
-        </Item>
-        <Item onClick={() => setMenuOpen(!menuOpen)}>
-          <a href="#testimonials">Testimonials</a>
+          <a href="#about">About</a>
         </Item>
         <Item onClick={() => setMenuOpen(!menuOpen)}>
           <a href="#contact">Contact</a>

@@ -44,7 +44,6 @@ function Main() {
           <Intro />
           <Portfolio />
           <About />
-
           <Contact />
         </Wrapper>
       </Container>
