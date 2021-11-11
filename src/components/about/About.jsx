@@ -107,7 +107,7 @@ const Wrapper = styled.div`
     }
   }
   .p {
-    width: 90%;
+    width: 80%;
     padding: 5px;
     border: 1px solid;
     margin-top: 5px;
