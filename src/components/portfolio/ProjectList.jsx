@@ -40,7 +40,7 @@ const ProjectList = ({active, setActive, item, setCurrent}) => {
     setActive(e.id);
   };
   return (
-    <Item className={active ? 'active' : ''} onClick={() => handleClick(item)} key={item.id}>
+    <Item className={active ? 'active' : ''} onClick={() => handleClick(item)}>
       <ProjectImage>
         <h4>{item.name}</h4>
         <img src={item.img} alt="" />

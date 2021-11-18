@@ -163,6 +163,7 @@ const Project = ({data}) => {
           <Bottom>
             {data.map(item => (
               <ProjectList
+                key={item.id}
                 item={item}
                 active={active === item.id}
                 setCurrent={setCurrent}
