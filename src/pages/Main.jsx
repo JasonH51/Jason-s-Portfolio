@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import About from '../components/about/About';
 import Contact from '../components/contact/Contact';
 import Intro from '../components/intro/Intro';
 import Menu from '../components/menu/Menu';
@@ -43,7 +42,6 @@ function Main() {
         <Wrapper>
           <Intro />
           <Portfolio />
-          <About />
           <Contact />
         </Wrapper>
       </Container>
