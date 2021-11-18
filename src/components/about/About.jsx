@@ -42,6 +42,15 @@ const Content = styled.div`
 
   .middle {
     transform: ${props => (props.isVisable ? 'translateX(0px)' : 'translateX(100vw)')};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   @media (max-width: 1000px) {
     width: 100%;
@@ -60,10 +69,10 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 200px;
+    min-width: 120px;
+    margin: 0px 10px;
   }
-  .tech-title {
-  }
+
   /* .tech-items {
     border: 1px solid;
     margin-bottom: 5px;
@@ -73,6 +82,7 @@ const Wrapper = styled.div`
   } */
   .contentText {
     display: flex;
+    width: 100%;
     h2 {
       text-decoration: underline;
     }
@@ -91,7 +101,6 @@ const Wrapper = styled.div`
     border: 1px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 10px ${e => e.theme.colors.dark};
-    /* height: 150px; */
     background-color: white;
   }
 
@@ -107,7 +116,8 @@ const Wrapper = styled.div`
     }
   }
   .p {
-    width: 80%;
+    width: 90%;
+    min-width: 300px;
     padding: 5px;
     border: 1px solid;
     margin-top: 5px;
@@ -127,7 +137,7 @@ const Wrapper = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
+      /* flex-direction: column; */
       width: 100%;
     }
 
@@ -153,8 +163,7 @@ const Wrapper = styled.div`
       width: 100px;
     }
     .text {
-      margin: 0px;
-      padding: 0;
+      margin: 0;
     }
     .eduText {
       padding: 5px;
@@ -180,7 +189,7 @@ const ImageContainer = styled.div`
   border-radius: 50%;
   overflow: hidden;
   ${props => (props.isVisable ? animation : '')}
-  @media (max-width: 768px) {
+  @media (max-width:  670px) {
     display: none;
   }
 `;
@@ -207,20 +216,21 @@ const About = () => {
         <Content>
           <Wrapper seconds={1} isVisable={isVisable}>
             <div className="top">
-              <h1>Interests</h1>
+              <h1>A little about me..</h1>
               <div className="p">
                 <p>
-                  Hi, thanks for checking out my website! I'm Jason Horton an INTP finding my new
-                  passion for programming. I spend most my days practicing, learning and writting
-                  notes on something new I'm learning about. I hope that one day I can be apart of
-                  this industry in a bigger and meaningful way.
-                  {/* Hi, I'm Jason thanks for checking out my portfolio. I would like to take some time
-                  and tell you a little about myself. I love technology and I spend most of my time
-                  at a computer learning pretty much everything. I found myself drawn to programming
-                  because of the seemingly limitless possibilities and the fact that I spend so much
-                  time with technology, that it just made sense to pursue a career as a programmer.
-                  Aside from learning, I enjoy going out on a mountain biking trail and getting some
-                  fresh air. */}
+                  {/* Hi, thanks for checking out my website! 
+                  I spend most my days practicing, learning and writting notes on something new I'm
+                  learning about. I hope that one day I can be apart of this industry in a bigger
+                  and meaningful way. */}
+                  Hey, thanks for stopping by! I'd like to tell you about my journey so far as a
+                  developer. I started on some free content from freecodecamp.org and moved onto a
+                  Udemy course on JavaScript which taught me syntax, how the DOM works, and many
+                  other things like OOP.. It was great and I really enjoyed building websites. So
+                  after that I decided to join a bootcamp to help guide me in the right direction
+                  and we dived into frameworks, libraries, and best practices. After bootcamp I
+                  continued on my own to build a few projects. I'm currently continuing my education
+                  through Udemy and documentation.
                   {/* I absolutely love science and technology. My whole life I've had an interest in
                   nature and learning how things work. I love to learn all kinds of things and
                   imagine the possibilities and opportunities new technologies introduce in our
@@ -228,7 +238,6 @@ const About = () => {
                   and I want to be apart of that world. To build something that will change the face
                   of our world and help solve problems people may not have even known they had. */}
                 </p>
-                <span>Personality type - INTP</span>
               </div>
             </div>
           </Wrapper>
@@ -272,7 +281,7 @@ const About = () => {
       </Center>
       <Bottom>
         <Content>
-          <Wrapper seconds={2.5} isVisable={isVisable}>
+          <Wrapper seconds={2.5} isVisable={isVisable} className="bottom">
             <div className="content">
               <h2>Skills</h2>
               <div className="contentText">

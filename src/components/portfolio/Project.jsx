@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import ProjectList from './ProjectList';
 
 const Wrapper = styled.div`
   display: flex;
@@ -115,36 +116,9 @@ const Bottom = styled.div`
   }
 `;
 
-const Item = styled.div`
-  border: 1px solid;
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 14px;
-  padding: 5px;
-  background-color: white;
-`;
-
-const ProjectImage = styled.div`
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  overflow: hidden;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-`;
-
 const Project = ({data}) => {
   const [current, setCurrent] = useState({});
+  const [active, setActive] = useState(1);
 
   useEffect(() => {
     setCurrent(data[0]);
@@ -188,12 +162,12 @@ const Project = ({data}) => {
         {data.length > 1 && (
           <Bottom>
             {data.map(item => (
-              <Item onClick={() => setCurrent(item)} key={item.id}>
-                <ProjectImage>
-                  <h4>{item.name}</h4>
-                  <img src={item.img} alt="" />
-                </ProjectImage>
-              </Item>
+              <ProjectList
+                item={item}
+                active={active === item.id}
+                setCurrent={setCurrent}
+                setActive={setActive}
+              />
             ))}
           </Bottom>
         )}

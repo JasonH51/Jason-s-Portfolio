@@ -12,7 +12,7 @@ const ListItem = styled.li`
   }
 
   &.active {
-    background-color: ${e => e.theme.colors.main};
+    background-color: ${e => e.theme.colors.dark};
     color: white;
   }
 `;

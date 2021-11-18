@@ -15,6 +15,7 @@ const Container = styled.div`
 
   h1 {
     font-size: 50px;
+    padding-bottom: 20px;
     overflow: hidden;
     @media (max-width: 768px) {
       font-size: 30px;
@@ -24,7 +25,6 @@ const Container = styled.div`
 `;
 
 const List = styled.ul`
-  margin: 10px;
   padding: 5px;
   list-style: none;
   display: flex;
@@ -63,7 +63,7 @@ const Portfolio = () => {
 
   return (
     <Container id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
       <List>
         {list.map(i => (
           <PortfolioList
