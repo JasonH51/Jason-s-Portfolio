@@ -3,13 +3,10 @@ import styled from 'styled-components';
 
 const ListItem = styled.li`
   font-size: 14px;
-  margin-right: 5px;
+  margin-right: 10px;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  @media (max-width: 768px) {
-    margin-right: 20px;
-  }
 
   &.active {
     background-color: ${e => e.theme.colors.dark};

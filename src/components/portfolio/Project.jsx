@@ -48,6 +48,10 @@ const Top = styled.div`
   flex: 0.5;
   padding: 5px;
   overflow: hidden;
+  @media (max-width: 768px) {
+    
+  }
+
 `;
 
 const Links = styled.div`
