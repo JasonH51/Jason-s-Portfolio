@@ -24,14 +24,11 @@ const Left = styled.div`
 const ImageContainer = styled.div`
   display: flex;
   overflow: hidden;
+  justify-content: center;
+
   img {
-    object-fit: cover;
-  }
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-  @media (min-width: 768px) {
-    align-items: center;
+    object-fit: contain;
+    height: 100%;
   }
 `;
 
