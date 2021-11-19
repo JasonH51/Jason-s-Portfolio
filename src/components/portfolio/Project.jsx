@@ -23,6 +23,7 @@ const Left = styled.div`
 
 const ImageContainer = styled.div`
   display: flex;
+  overflow: hidden;
   img {
     object-fit: cover;
   }
@@ -49,9 +50,7 @@ const Top = styled.div`
   padding: 5px;
   overflow: hidden;
   @media (max-width: 768px) {
-    
   }
-
 `;
 
 const Links = styled.div`
@@ -92,7 +91,6 @@ const Center = styled.div`
   justify-content: center;
   flex-direction: column;
   flex: 1;
-  margin: 2em;
   border-top: 1px solid;
   border-bottom: 1px solid;
 

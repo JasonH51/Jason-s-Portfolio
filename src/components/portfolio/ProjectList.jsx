@@ -3,19 +3,32 @@ import styled from 'styled-components';
 
 const Item = styled.div`
   border: 1px solid;
-  width: 30%;
+  /* width: 30%; */
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  flex: 1;
   border-radius: 10px;
-  font-size: 14px;
-  padding: 5px;
+  padding: 2px;
+  margin: 5px;
   background-color: white;
+  max-width: 189px;
+
+  h4 {
+    font-size: 1.4vmin;
+  }
 
   &.active {
     background-color: ${e => e.theme.colors.dark};
     color: white;
+  }
+
+  @media (max-width: 768px) {
+    h4 {
+      font-size: 2vw;
+    }
+    max-width: 166px;
   }
 `;
 
@@ -28,8 +41,8 @@ const ProjectImage = styled.div`
   flex-direction: column;
   overflow: hidden;
   img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     object-fit: cover;
   }
 `;
