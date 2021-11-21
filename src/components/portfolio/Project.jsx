@@ -56,9 +56,10 @@ const Links = styled.div`
   justify-content: space-around;
   flex: 1;
 
-  span {
+  button {
     color: ${e => e.theme.colors.dark};
     margin: 10px;
+    padding: 4px;
   }
 `;
 
@@ -94,10 +95,12 @@ const Center = styled.div`
   p {
     margin: 0 2em;
     margin-bottom: 2em;
+    font-size: clamp(12px, 2vw, 16px);
   }
   @media (max-width: 768px) {
     flex: 3;
     margin: 0;
+
     ${Tech} {
       display: none;
     }
@@ -123,6 +126,11 @@ const Project = ({data}) => {
     setCurrent(data[0]);
   }, [data]);
 
+  const handleHref = e => {
+    e.preventDefault();
+    window.open(e, '_blank');
+  };
+
   return (
     <Wrapper>
       <Left>
@@ -146,15 +154,27 @@ const Project = ({data}) => {
             </Tech>
             <Links>
               {current?.website ? (
-                <a href={current?.website} target="_blank" rel="noreferrer">
-                  <span>Website</span>
-                </a>
+               
+                <button
+                  onClick={e => {
+                    e.preventDefault();
+                    window.open(`${current?.website}`, '_blank');
+                  }}
+                >
+                  Website
+                </button>
               ) : (
                 ''
               )}
-              <a href={current?.git} target="_blank" rel="noreferrer">
-                <span>Github</span>
-              </a>
+            
+              <button
+                onClick={e => {
+                  e.preventDefault();
+                  window.open(`${current?.git}`, '_blank');
+                }}
+              >
+                Github
+              </button>
             </Links>
           </CenterContainer>
         </Center>

@@ -32,7 +32,7 @@ export const frontEnd = [
   {
     id: 1,
     name: `Movies & TV shows`,
-    desc: `Movies and tv show search website that uses moviedb api for all of its data. I enjoyed making this and I use this website all the time!`,
+    desc: `I build this website using React and pulled the data using themoviedb.org API. You're able to see the currently trending movies and shows right now, filter by category, and search by name. All API requests are dynamic using javascript template literals. Try it out and find your next show to watch.`,
     img: 'assets/movieWebsite.PNG',
     git: 'https://github.com/JasonH51/Movies-TV-Series',
     website: 'https://movies-tv-series.netlify.app',
@@ -41,7 +41,7 @@ export const frontEnd = [
   {
     id: 2,
     name: `Food & Entertainment`,
-    desc: `A single page app that helps you find places near by to eat, sleep, and entertain you.`,
+    desc: `This web app gets your current location (if allowed) from the DOM and uses this data to dynamically render and fetch from google maps and travel advisor api (from rapidapi.com) using the coordinates and "type" category from the drop-down menu. You'll get a list of local businesses and relevant information about them.`,
     img: 'assets/mapSite.PNG',
     git: 'https://github.com/JasonH51/food-and-entertainment',
     website: 'https://food-and-entertainment.netlify.app/',
@@ -50,7 +50,7 @@ export const frontEnd = [
   {
     id: 3,
     name: `E-Commerce-Website`,
-    desc: `E-Commerce website using FakeStoreAPI.com for dummy data. I tried to build a website someone could actually use for an online business.`,
+    desc: `E-Commerce website using FakeStoreAPI.com. This shopping web app uses redux to store cart and user information which persists. You're about to checkout the cart using react-stripe-checkout. Also, this project is part of a full stack package I'm currently working on.`,
     img: 'assets/e-website.PNG',
     git: 'https://github.com/JasonH51/e-commerce-website',
     website: 'https://wojak.netlify.app/',
@@ -71,7 +71,7 @@ export const backEnd = [
   {
     id: 1,
     name: `Mongodb - Express`,
-    desc: `CRUD api that uses models for products, users, carts, and orders. This api has routes for get, put, post, delete and saving everything to a cloud.mongodb database.`,
+    desc: `E-commerce backend server connected with a cloud.mongodb database. Building a CRUD API that uses mongoose models for products, users, carts, and orders. When a post request is made at the register endpoint, I'm using CryptoJS to encrypt the password before saving it to the database and a JWT is created on login. Admins can update, create, and delete anything in the database and users can get items from the database.`,
     img: 'assets/e-api.PNG',
     git: 'https://github.com/JasonH51/e-commerce-api',
     website: '',
