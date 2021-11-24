@@ -126,11 +126,6 @@ const Project = ({data}) => {
     setCurrent(data[0]);
   }, [data]);
 
-  const handleHref = e => {
-    e.preventDefault();
-    window.open(e, '_blank');
-  };
-
   return (
     <Wrapper>
       <Left>
@@ -154,7 +149,6 @@ const Project = ({data}) => {
             </Tech>
             <Links>
               {current?.website ? (
-               
                 <button
                   onClick={e => {
                     e.preventDefault();
@@ -166,7 +160,7 @@ const Project = ({data}) => {
               ) : (
                 ''
               )}
-            
+
               <button
                 onClick={e => {
                   e.preventDefault();
